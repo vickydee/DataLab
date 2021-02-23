@@ -33,14 +33,15 @@ public class FashClass {
 		 // This will register the line in history and will skip the first line
 		 String nextLine = null; //declare String nextLine
 		//loop will run from 2nd line
-		 String splitBy = ","; //delimiter
+		 String splitBy = ","; //delimiter 
 		 while (( nextLine = in.readLine() ) != null)
 		 { 
-		 String[] clothes = nextLine.split(splitBy);
-		 /* public String[] split(String x)
-		  * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
-		  * returns a String array.
-		  */      
+		 nextLine = in.readLine();
+		 // String [] clothes += nextLine.split(splitBy);
+		  /* public String[] split(String x)
+		   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
+		   * returns a String array.
+		   */      
 		 }
 		
 		for(int i = 0;) {
