@@ -11,7 +11,18 @@ import java.io.FileReader;
 import java.io.IOException; 
 
 public class FashClass {
-		 for(int i = 0, )		 
+	private ArrayList<String> label;
+
+	private ArrayList<String> tee;
+	private ArrayList<String> trouser;
+	private ArrayList<String> pullover
+	private ArrayList<String> dress;
+	private ArrayList<String> coat;
+	private ArrayList<String> sandal;
+	private ArrayList<String> shirt; 
+	private ArrayList<String> sneaker; 
+	private ArrayList<String> bag;
+	private ArrayList<String> boot;
 	
 	FashClass() {
 		/* 0 T-shirt/top 
@@ -37,11 +48,16 @@ public class FashClass {
 		 while (( nextLine = in.readLine() ) != null)
 		 { 
 		 nextLine = in.readLine();
-		 // String [] clothes += nextLine.split(splitBy);
+		 String[] clothes += nextLine.split(splitBy);
 		  /* public String[] split(String x)
 		   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
 		   * returns a String array.
-		   */      
+		   */     
+		 for(int i = 0; i < clothes.length; i += 140)
+		 {
+		  if(i == 0) 
+		   label.add(clothes[i]);
+		 }
 		 }
 		
 		for(int i = 0;) {
