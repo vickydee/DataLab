@@ -44,8 +44,9 @@ public class FashClass {
 		 in.readLine();
 
 		 String nextLine = null; //declare String nextLine
-		//loop will run from 2nd line
 		 String splitBy = ","; //delimiter 
+
+		//loop will run from 2nd line
 		 while (( nextLine = in.readLine() ) != null)
 		 { 
 		 nextLine = in.readLine();
