@@ -34,15 +34,14 @@ public class FashClass {
 
 		 BufferedReader in 
 		 	= new BufferedReader(new FileReader("H:\\fashion-mnist_train.csv"));  
-		 
-		 String splitBy = ","; //delimiter
 		 in.readLine(); // Similar to Scanner, nextLine(), this will read the first line
 		 // This will register the line in history and will skip the first line
 		 String nextLine = null; //declare String nextLine
 		//loop will run from 2nd line
+		 String splitBy = ","; //delimiter
 		 while (( nextLine = in.readLine() ) != null)
 		 { 
-		        //some code
+		       
 		 }
 		
 		for(int i = 0;) {
