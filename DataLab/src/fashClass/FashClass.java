@@ -5,6 +5,7 @@ import java.io.*;
 	// BufferedReader class reads the file line by line until the end character is reached.
 	// The buffer size may be specified, or the default size may be used. 
 	// * BufferedReader(Reader in, int sz)
+import java.util.*; 
 
 public class FashClass {
 	private ArrayList<Integer> tee;
