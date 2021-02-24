@@ -58,7 +58,7 @@ public class FashClass {
 				addMethod(clothes, bag);
 			if(clothes[0]==9)
 				addMethod(clothes, boot);
-			 /* 0 T-shirt/top 
+			/* 0 T-shirt/top 
 			 * 1 Trouser 
 			 * 2 Pullover 
 			 * 3 Dress 
