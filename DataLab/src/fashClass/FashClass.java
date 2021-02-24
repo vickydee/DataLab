@@ -20,10 +20,11 @@ public class FashClass {
 	private ArrayList<Integer> boot;
 	
 	FashClass() {
+		try {
 		BufferedReader in 
 		 	= new BufferedReader(new FileReader("H:\\fashion-mnist_train.csv"));  
 		
-		 in.readLine();
+		in.readLine();
 		  /* Similar to Scanner, nextLine(), this method will read the first line.
 		   * This will register the line in history and will skip the first line
 		   */
@@ -34,7 +35,7 @@ public class FashClass {
 		//loop will run from 2nd line
 		 while ((nextLine = in.readLine()) != null) { 
 			nextLine = in.readLine();
-			String[] clothes += nextLine.split(splitBy);
+			String[] clothes = nextLine.split(splitBy);
 			  /* public String[] split(String x)
 			   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
 			   * returns a String array.
@@ -71,6 +72,11 @@ public class FashClass {
 			 * 9 Ankle boot
 			 */
 		}
+		in.close();
+		} catch (IOException e) {
+				e.printStackTrace();
+			}
+		
 		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists at this point.
 	}
 	
@@ -80,11 +86,21 @@ public class FashClass {
 	}
 	
 	public void mostPopular() {
-		ArrayList<Integer>[] arr = new ArrayList<Integer>(tee, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, boot);
-			// https://www.geeksforgeeks.org/array-of-arraylist-in-java/
+		ArrayList<ArrayList<Integer>> arr = new ArrayList<ArrayList<Integer>>();
+		arr.add(tee);
+		arr.add(trouser);
+		arr.add(pullover);
+		arr.add(dress);
+		arr.add(coat);
+		arr.add(sandal);
+		arr.add(shirt);
+		arr.add(shirt);
+		arr.add(sneaker);
+		arr.add(bag);
+		arr.add(boot);
 		int index = 0;
-		for (int i = 1; i < arr.length; i++) {
-			if(arr[i-1].getSize() < arr[i].getSize()) {
+		for (int i = 1; i < arr.size(); i++) {
+			if(arr.get(i-1).size() < arr.get(i).size()) {
 				index = i;
 			}
 		}
@@ -111,12 +127,14 @@ public class FashClass {
 			return "bags";
 		if(i == 9)
 			return "boots";
+		return null;
 	}
 	// method 1: find mean standard deviation of all data
 	// method 2: find mean standard deviation between label	
 	
 	public static void main(String[] args) {
-		
+		FashClass obj = new FashClass();
+		obj.mostPopular();
 	}
 
 }
