@@ -38,25 +38,25 @@ public class FashClass {
 			   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
 			   * returns a String array.
 			   */     
-			if(clothes[0]==0)
+			if(clothes[0].equals("0"))
 				addMethod(clothes, tee);
-			if(clothes[0]==1)
+			if(clothes[0].equals("1"))
 				addMethod(clothes, trouser);
-			if(clothes[0]==2)
+			if(clothes[0].equals("2"))
 				addMethod(clothes, pullover);
-			if(clothes[0]==3)
+			if(clothes[0].equals("3"))
 				addMethod(clothes, dress);
-			if(clothes[0]==4)
+			if(clothes[0].equals("4"))
 				addMethod(clothes, coat);
-			if(clothes[0]==5)
+			if(clothes[0].equals("5"))
 				addMethod(clothes, sandal);
-			if(clothes[0]==6)
+			if(clothes[0].equals("6"))
 				addMethod(clothes, shirt);
-			if(clothes[0]==7)
+			if(clothes[0].equals("7"))
 				addMethod(clothes, sneaker);
-			if(clothes[0]==8)
+			if(clothes[0].equals("8"))
 				addMethod(clothes, bag);
-			if(clothes[0]==9)
+			if(clothes[0].equals("9"))
 				addMethod(clothes, boot);
 			/* 0 T-shirt/top 
 			 * 1 Trouser 
