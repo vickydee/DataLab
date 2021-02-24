@@ -33,10 +33,9 @@ public class FashClass {
 		String splitBy = ","; //delimiter 
 
 		//loop will run from 2nd line
-		 while ((nextLine = in.readLine()) != null)
-		 { 
-			 nextLine = in.readLine();
-			 String[] clothes += nextLine.split(splitBy);
+		 while ( (nextLine = in.readLine()) != null) { 
+			nextLine = in.readLine();
+			String[] clothes += nextLine.split(splitBy);
 			  /* public String[] split(String x)
 			   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
 			   * returns a String array.
