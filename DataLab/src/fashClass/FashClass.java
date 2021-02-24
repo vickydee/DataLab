@@ -80,6 +80,7 @@ public class FashClass {
 	
 	public void mostPopular() {
 		ArrayList<Integer>[] arr = new ArrayList<Integer>(tee, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, boot);
+			// https://www.geeksforgeeks.org/array-of-arraylist-in-java/
 		int index = 0;
 		for (int i = 1; i < arr.length; i++) {
 			if(arr[i-1].getSize() < arr[i].getSize()) {
