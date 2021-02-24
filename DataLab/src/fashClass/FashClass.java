@@ -65,6 +65,8 @@ public class FashClass {
 		for(int i = 0;) {
 			// arr[] = in.readLine();
 		}
+// method 1: find mean standard deviation of all data
+// method 2: find mean standard deviation between label
 	}
 	
 	public static void main(String[] args) {
