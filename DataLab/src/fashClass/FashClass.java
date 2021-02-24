@@ -9,16 +9,16 @@ import java.io.FileReader;
 import java.io.IOException; 
 
 public class FashClass {
-	private ArrayList<String> tee;
-	private ArrayList<String> trouser;
-	private ArrayList<String> pullover;
-	private ArrayList<String> dress;
-	private ArrayList<String> coat;
-	private ArrayList<String> sandal;
-	private ArrayList<String> shirt; 
-	private ArrayList<String> sneaker; 
-	private ArrayList<String> bag;
-	private ArrayList<String> boot;
+	private ArrayList<Integer> tee;
+	private ArrayList<Integer> trouser;
+	private ArrayList<Integer> pullover;
+	private ArrayList<Integer> dress;
+	private ArrayList<Integer> coat;
+	private ArrayList<Integer> sandal;
+	private ArrayList<Integer> shirt; 
+	private ArrayList<Integer> sneaker; 
+	private ArrayList<Integer> bag;
+	private ArrayList<Integer> boot;
 	
 	FashClass() {
 		BufferedReader in 
@@ -72,12 +72,12 @@ public class FashClass {
 			 * 9 Ankle boot
 			 */
 		}
-		//All lines of the csv should've been scanned and added to their designated arrays.
+		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists.
 	}
 
-	private void addMethod(String[] arr, ArrayList<String> list) {
+	private void addMethod(String[] arr, ArrayList<Integer> list) {
 		 for(int i = 0; i < arr.length; i += 157)
-			 list.add(arr[i]);
+			 list.add(Integer.parseInt(arr[i]));
 	}
 	
 	// method 1: find mean standard deviation of all data
