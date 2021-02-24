@@ -42,18 +42,6 @@ public class FashClass {
 			   * returns a String array.
 			   */     
 			
-			/* For the following: 
-			 * 0 T-shirt/top 
-			 * 1 Trouser 
-			 * 2 Pullover 
-			 * 3 Dress 
-			 * 4 Coat 
-			 * 5 Sandal 
-			 * 6 Shirt 
-			 * 7 Sneaker 
-			 * 8 Bag 
-			 * 9 Ankle boot
-			 */
 			if(clothes[0]==0)
 				addMethod(clothes, tee);
 			if(clothes[0]==1)
@@ -74,6 +62,17 @@ public class FashClass {
 				addMethod(clothes, bag);
 			if(clothes[0]==9)
 				addMethod(clothes, boot);
+			 /* 0 T-shirt/top 
+			 * 1 Trouser 
+			 * 2 Pullover 
+			 * 3 Dress 
+			 * 4 Coat 
+			 * 5 Sandal 
+			 * 6 Shirt 
+			 * 7 Sneaker 
+			 * 8 Bag 
+			 * 9 Ankle boot
+			 */
 		}
 // method 1: find mean standard deviation of all data
 // method 2: find mean standard deviation between label
