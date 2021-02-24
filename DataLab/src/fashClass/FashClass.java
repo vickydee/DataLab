@@ -41,7 +41,6 @@ public class FashClass {
 			   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
 			   * returns a String array.
 			   */     
-			
 			if(clothes[0]==0)
 				addMethod(clothes, tee);
 			if(clothes[0]==1)
@@ -81,23 +80,8 @@ public class FashClass {
 	private void addMethod(String[] arr, ArrayList<String> list) {
 		 for(int i = 0; i < arr.length; i += 157)
 		 {
-			 list.add((i));
+			 list.add(arr[i]);
 		 }		
-		for(int i = 0;) {
-			// arr[] = in.readLine();
-		// goal: if # then add to ArrayList
-		/* 0 T-shirt/top 
-		 * 1 Trouser 
-		 * 2 Pullover 
-		 * 3 Dress 
-		 * 4 Coat 
-		 * 5 Sandal 
-		 * 6 Shirt 
-		 * 7 Sneaker 
-		 * 8 Bag 
-		 * 9 Ankle boot
-		 */
-		//
 
 	}
 	
