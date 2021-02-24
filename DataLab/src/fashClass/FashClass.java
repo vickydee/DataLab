@@ -70,14 +70,46 @@ public class FashClass {
 			 * 9 Ankle boot
 			 */
 		}
-		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists.
+		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists at this point.
 	}
-
+	
 	private void addMethod(String[] arr, ArrayList<Integer> list) {
 		 for(int i = 0; i < arr.length; i += 157)
 			 list.add(Integer.parseInt(arr[i]));
 	}
 	
+	public void mostPopular() {
+		ArrayList<Integer>[] arr = new ArrayList<Integer>(tee, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, boot);
+		int index = 0;
+		for (int i = 1; i < arr.length; i++) {
+			if(arr[i-1].getSize() < arr[i].getSize()) {
+				index = i;
+			}
+		}
+		System.out.println("The most popular fashion item is " + nameMethod(index));
+	}
+	public String nameMethod(int i) {
+		if(i == 0)
+			return "t-shirts/tees";
+		if(i == 1)
+			return "trousers";
+		if(i == 2)
+			return "pullovers";
+		if(i == 3)
+			return "dresses";
+		if(i == 4)
+			return "coats";
+		if(i == 5)
+			return "sandals";
+		if(i == 6)
+			return "shirts";
+		if(i == 7)
+			return "sneakers";
+		if(i == 8)
+			return "bags";
+		if(i == 9)
+			return "boots";
+	}
 	// method 1: find mean standard deviation of all data
 	// method 2: find mean standard deviation between label	
 	
