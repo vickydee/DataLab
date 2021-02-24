@@ -33,7 +33,7 @@ public class FashClass {
 		String splitBy = ","; //delimiter 
 
 		//loop will run from 2nd line
-		 while ( (nextLine = in.readLine()) != null) { 
+		 while ((nextLine = in.readLine()) != null) { 
 			nextLine = in.readLine();
 			String[] clothes += nextLine.split(splitBy);
 			  /* public String[] split(String x)
@@ -72,17 +72,16 @@ public class FashClass {
 			 * 9 Ankle boot
 			 */
 		}
-// method 1: find mean standard deviation of all data
-// method 2: find mean standard deviation between label
+		//All lines of the csv should've been scanned and added to their designated arrays.
 	}
-	
+
 	private void addMethod(String[] arr, ArrayList<String> list) {
 		 for(int i = 0; i < arr.length; i += 157)
-		 {
 			 list.add(arr[i]);
-		 }		
-
 	}
+	
+	// method 1: find mean standard deviation of all data
+	// method 2: find mean standard deviation between label	
 	
 	public static void main(String[] args) {
 		
