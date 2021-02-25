@@ -72,9 +72,7 @@ public class FashClass {
 		}
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
-	 	 	in.close();
-      		}
+		} 
 		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists at this point.
 	}
 	
