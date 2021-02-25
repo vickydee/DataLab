@@ -20,9 +20,7 @@ public class FashClass {
 	private ArrayList<Integer> boot;
 	
 	FashClass() {
-		try {
-		BufferedReader in 
-		 	= new BufferedReader(new FileReader("H:\\fashion-mnist_train.csv"));  
+		try(BufferedReader in = new BufferedReader(new FileReader("H:\\fashion-mnist_train.csv"))) {
 		
 		in.readLine();
 		  /* Similar to Scanner, nextLine(), this method will read the first line.
