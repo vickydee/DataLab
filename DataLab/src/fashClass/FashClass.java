@@ -72,11 +72,11 @@ public class FashClass {
 			 * 9 Ankle boot
 			 */
 		}
-		in.close();
 		} catch (IOException e) {
-				e.printStackTrace();
-			}
-		
+			e.printStackTrace();
+		} finally {
+	 	 	in.close();
+      		}
 		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists at this point.
 	}
 	
