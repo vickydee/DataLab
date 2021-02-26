@@ -20,56 +20,57 @@ public class FashClass {
 	private ArrayList<Integer> boot;
 	
 	FashClass() {
-		try(BufferedReader in = new BufferedReader(new FileReader("H:\\fashion-mnist_train.csv"))) {
+		try( BufferedReader in = new BufferedReader(new FileReader("H:\\fashion-mnist_train.csv")) ) {
 		
-		in.readLine();
-		  /* Similar to Scanner, nextLine(), this method will read the first line.
-		   * This will register the line in history and will skip the first line
-		   */
+			in.readLine();
+			  /* Similar to Scanner, nextLine(), this method will read the first line.
+			   * This will register the line in history and will skip the first line
+			   */
 
-		String nextLine = null; //declares String nextLine
-		String splitBy = ","; //delimiter 
+			String nextLine = null; //declares String nextLine
+			String splitBy = ","; //delimiter 
 
-		//loop will run from 2nd line
-		 while ((nextLine = in.readLine()) != null) { 
-			nextLine = in.readLine();
-			String[] clothes = nextLine.split(splitBy);
-			  /* public String[] split(String x)
-			   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
-			   * returns a String array.
-			   */     
-			if(clothes[0].equals("0"))
-				addMethod(clothes, tee);
-			if(clothes[0].equals("1"))
-				addMethod(clothes, trouser);
-			if(clothes[0].equals("2"))
-				addMethod(clothes, pullover);
-			if(clothes[0].equals("3"))
-				addMethod(clothes, dress);
-			if(clothes[0].equals("4"))
-				addMethod(clothes, coat);
-			if(clothes[0].equals("5"))
-				addMethod(clothes, sandal);
-			if(clothes[0].equals("6"))
-				addMethod(clothes, shirt);
-			if(clothes[0].equals("7"))
-				addMethod(clothes, sneaker);
-			if(clothes[0].equals("8"))
-				addMethod(clothes, bag);
-			if(clothes[0].equals("9"))
-				addMethod(clothes, boot);
-			/* 0 T-shirt/top 
-			 * 1 Trouser 
-			 * 2 Pullover 
-			 * 3 Dress 
-			 * 4 Coat 
-			 * 5 Sandal 
-			 * 6 Shirt 
-			 * 7 Sneaker 
-			 * 8 Bag 
-			 * 9 Ankle boot
-			 */
-		}
+			//loop will run from 2nd line
+			 while ((nextLine = in.readLine()) != null) 
+			 { 
+				nextLine = in.readLine();
+				String[] clothes = nextLine.split(splitBy);
+				  /* public String[] split(String x)
+				   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
+				   * returns a String array.
+				   */     
+				if(clothes[0].equals("0"))
+					addMethod(clothes, tee);
+				if(clothes[0].equals("1"))
+					addMethod(clothes, trouser);
+				if(clothes[0].equals("2"))
+					addMethod(clothes, pullover);
+				if(clothes[0].equals("3"))
+					addMethod(clothes, dress);
+				if(clothes[0].equals("4"))
+					addMethod(clothes, coat);
+				if(clothes[0].equals("5"))
+					addMethod(clothes, sandal);
+				if(clothes[0].equals("6"))
+					addMethod(clothes, shirt);
+				if(clothes[0].equals("7"))
+					addMethod(clothes, sneaker);
+				if(clothes[0].equals("8"))
+					addMethod(clothes, bag);
+				if(clothes[0].equals("9"))
+					addMethod(clothes, boot);
+				/* 0 T-shirt/top 
+				 * 1 Trouser 
+				 * 2 Pullover 
+				 * 3 Dress 
+				 * 4 Coat 
+				 * 5 Sandal 
+				 * 6 Shirt 
+				 * 7 Sneaker 
+				 * 8 Bag 
+				 * 9 Ankle boot
+				 */
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
