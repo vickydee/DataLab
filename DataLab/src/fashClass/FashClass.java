@@ -20,25 +20,6 @@ public class FashClass {
 	private ArrayList<Integer> boot;
 	
 	FashClass() {
-		try( BufferedReader in = new BufferedReader(new FileReader("H:\\fashion-mnist_train.csv")) ) {
-		
-			in.readLine();
-			  /* Similar to Scanner, nextLine(), this method will read the first line.
-			   * This will register the line in history and will skip the first line
-			   */
-
-			String nextLine = null; //declares String nextLine
-			String splitBy = ","; //delimiter 
-
-			//loop will run from 2nd line
-			 while ((nextLine = in.readLine()) != null) 
-			 { 
-				nextLine = in.readLine();
-				String[] clothes = nextLine.split(splitBy);
-				  /* public String[] split(String x)
-				   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
-				   * returns a String array.
-				   */     
 				if(clothes[0].equals("0"))
 					addMethod(clothes, tee);
 				if(clothes[0].equals("1"))
@@ -70,9 +51,6 @@ public class FashClass {
 				 * 8 Bag 
 				 * 9 Ankle boot
 				 */
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
 		} 
 		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists at this point.
 	}
@@ -130,8 +108,7 @@ public class FashClass {
 	// method 2: find mean standard deviation between label	
 	
 	public static void main(String[] args) {
-		FashClass obj = new FashClass();
-		obj.mostPopular();
+		
 	}
 
 }
