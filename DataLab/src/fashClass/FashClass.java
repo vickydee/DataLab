@@ -4,49 +4,48 @@ import java.io.*;
 import java.util.*; 
 
 public class FashClass {
-	private ArrayList<Integer> tee, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, boot;
-		/* 0 T-shirt/top 
-		 * 1 Trouser 
-		 * 2 Pullover 
-		 * 3 Dress 
-		 * 4 Coat 
-		 * 5 Sandal 
-		 * 6 Shirt 
-		 * 7 Sneaker 
-		 * 8 Bag 
-		 * 9 Ankle boot
-		 */
+	private ArrayList<Integer> tee = new ArrayList<Integer>();
+	private ArrayList<Integer> trouser = new ArrayList<Integer>();
+	private ArrayList<Integer> pullover = new ArrayList<Integer>();
+	private ArrayList<Integer> dress = new ArrayList<Integer>();
+	private ArrayList<Integer> coat = new ArrayList<Integer>();
+	private ArrayList<Integer> sandal = new ArrayList<Integer>();
+	private ArrayList<Integer> shirt = new ArrayList<Integer>();
+	private ArrayList<Integer> sneaker = new ArrayList<Integer>();
+	private ArrayList<Integer> bag = new ArrayList<Integer>();
+	private ArrayList<Integer> boot = new ArrayList<Integer>();
+	
 	FashClass() {
-	    try {
-	      Scanner scan = new Scanner(new File("H:\\fashion-mnist_train.csv"));
-	      scan.nextLine();
-	      while(scan.hasNextLine()) {
-		String line = scan.nextLine();
-		String[] spltLn = line.split(",");
-		  /* public String[] split(String x)
-		   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
-		   * returns a String array.
-		   */ 
-			if(spltLn[0].equals("0"))
-				addMethod(spltLn, tee);
-			if(spltLn[0].equals("1"))
-				addMethod(spltLn, trouser);
-			if(spltLn[0].equals("2"))
-				addMethod(spltLn, pullover);
-			if(spltLn[0].equals("3"))
-				addMethod(spltLn, dress);
-			if(spltLn[0].equals("4"))
-				addMethod(spltLn, coat);
-			if(spltLn[0].equals("5"))
-				addMethod(spltLn, sandal);
-			if(spltLn[0].equals("6"))
-				addMethod(spltLn, shirt);
-			if(spltLn[0].equals("7"))
-				addMethod(spltLn, sneaker);
-			if(spltLn[0].equals("8"))
-				addMethod(spltLn, bag);
-			if(spltLn[0].equals("9"))
-				addMethod(spltLn, boot);
+	try {
+	    Scanner scan = new Scanner(new File("C:\\Users\\F\\eclipse-workspace\\Unit7 DataLab\\src\\fashion-mnist_train.csv"));
+	    scan.nextLine();
+	    while(scan.hasNextLine()) {
+			String line = scan.nextLine();
+			String[] spltLn = line.split(",");
+			  /* public String[] split(String x)
+			   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
+			   * returns a String array.
+			   */ 	
+				if(spltLn[0].equals("0"))
+					addMethod(spltLn, tee);
+				if(spltLn[0].equals("1"))
+					addMethod(spltLn, trouser);
+				if(spltLn[0].equals("2"))
+					addMethod(spltLn, pullover);
+				if(spltLn[0].equals("3"))
+					addMethod(spltLn, dress);
+				if(spltLn[0].equals("4"))
+					addMethod(spltLn, coat);
+				if(spltLn[0].equals("5"))
+					addMethod(spltLn, sandal);
+				if(spltLn[0].equals("6"))
+					addMethod(spltLn, shirt);
+				if(spltLn[0].equals("7"))
+					addMethod(spltLn, sneaker);
+				if(spltLn[0].equals("8"))
+					addMethod(spltLn, bag);
+				if(spltLn[0].equals("9"))
+					addMethod(spltLn, boot);
 	      }
 	      scan.close();
 
@@ -56,33 +55,12 @@ public class FashClass {
 	}
 	
 	private void addMethod(String[] arr, ArrayList<Integer> list) {
-		 for(int i = 0; i < arr.length; i += 157)
-			 list.add(Integer.getInteger(arr[i]));
+		 for(int i = 1; i < arr.length; i += 140) {
+			 list.add(Integer.valueOf(arr[i]));
+		 }
 	}
-	
-	public void mostPopular() {
-		ArrayList<ArrayList<Integer>> arr = new ArrayList<ArrayList<Integer>>();
-		arr.add(tee);
-		arr.add(trouser);
-		arr.add(pullover);
-		arr.add(dress);
-		arr.add(coat);
-		arr.add(sandal);
-		arr.add(shirt);
-		arr.add(shirt);
-		arr.add(sneaker);
-		arr.add(bag);
-		arr.add(boot);
-		
-		int index = 0;
-		for (int i = 1; i < arr.size(); i++) {
-			if(arr.get(i-1).size() < arr.get(i).size()) {
-				index = i;
-			}
-		}
-		
-		System.out.println("The most popular fashion item is " + nameMethod(index));
-	}
+//USES: I.E.	
+	//System.out.println("The most popular fashion item is " + nameMethod(index));
 	public String nameMethod(int i) {
 		if(i == 0)
 			return "t-shirts/tees";
@@ -109,7 +87,24 @@ public class FashClass {
 	// method 1: find mean standard deviation of all data
 	// method 2: find mean standard deviation between label	
 	
+	public String toString() {
+		String str = "";
+		str += "0 T-shirt/top = "+tee.size()+"\n";
+		str += "1 Trouser = "+trouser.size() +"\n";
+		str += "2 Pullover = "+pullover.size()+"\n";
+		str += "3 Dress = "+dress.size()+"\n";
+		str += "4 Coat = "+coat.size()+"\n";
+		str += "5 Sandal = "+sandal.size()+"\n";
+		str += "6 Shirt = "+shirt.size()+"\n";
+		str += "7 Sneaker = "+sneaker.size()+"\n";
+		str += "8 Bag = "+bag.size()+"\n";
+		str += "9 Ankle boot = "+boot.size()+"\n";
+		return str;
+	}
+	
 	public static void main(String[] args) {
+		FashClass object = new FashClass();
+		System.out.println(object.toString());
 		
 	}
 
