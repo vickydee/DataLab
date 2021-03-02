@@ -162,10 +162,87 @@ public class FashClass {
 	
 	public static void main(String[] args) {
 		FashClass object = new FashClass();
-		//print all functions HERE
 		System.out.println(object.toString());
-		double std = object.standardDeviation();
-		System.out.println("Standard Deviation of all data: " + std);
+		System.out.println("Standard Deviation of all data: " + object.standardDeviation());
+		object.funct();
+	}
+	
+	public void funct() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Welcome to FashClass; choose from the available methods:");
+		System.out.println("Type sd for standardDeviation()\n ac to print lists\n mu for mutator methods\n ts for toString()");
+		String in = scan.nextLine();
+			if(in.equals("sd")){
+			   System.out.println("Type to choose: all, tee, trouser, pullover, dress, or boot");
+			   in = scan.nextLine();
+				if(in.equals("all"))
+				   System.out.println("Standard Deviation: "+object.standardDeviation());
+				if(in.equals("tee"))
+				   System.out.println("Standard Deviation: "+object.standardDeviation(object.getTee()));
+				if(in.equals("trouser"))
+				   System.out.println("Standard Deviation: "+object.standardDeviation(object.getTrouser()));
+				if(in.equals("pullover"))
+				   System.out.println("Standard Deviation: "+object.standardDeviation(object.getPullover()));
+				if(in.equals("dress"))
+				   System.out.println("Standard Deviation: "+object.standardDeviation(object.getDress()));
+				if(in.equals("boot"))
+				   System.out.println("Standard Deviation: "+object.standardDeviation(object.getBoot()));
+			}
+			if(in.equals("ac")){
+			   System.out.println("Type getTee(), getTrouser(), getPullover(), getDress(), getCoat(), getSandal(), getShirt(), getSneaker(), getBag(), or getBoot()");
+			   in = scan.nextLine();
+			   ArrayList<Integer> ac = new ArrayList<Integer>();
+				if(in.equals("getTee()") 
+				   ac = object.getTee();
+				if(in.equals("getTrouser()") 
+				   ac = object.getTrouser();
+				if(in.equals("getPullover()") 
+				   ac = object.getPullover();
+				if(in.equals("getDress()") 
+				   ac = object.getDress();
+				if(in.equals("getCoat()") 
+				   ac = object.getCoat();
+				if(in.equals("getSandal()") 
+				   ac = object.getSandal();
+				if(in.equals("getShirt()") 
+				   ac = object.getShirt();
+				if(in.equals("getSneaker()") 
+				   ac = object.getSneaker();
+				if(in.equals("getBag()") 
+				   ac = object.getBag();
+				if(in.equals("getBoot()") 
+				   ac = object.getBoot();
+			   for(Integer pr : ac) {
+			   	System.out.print(pr + " ");
+			   }
+			}
+			if(in.equals("mu")){
+			   System.out.println("Type addToTee(), addToTrouser(), addToPullover(), addToDress(), addToCoat(), addToSandal(), addToShirt(), addToSneaker(), addToBag(), or addToBoot()");
+			   in = scan.nextLine();
+				if(in.equals("addToTee()") 
+				   object.addToTee();
+				if(in.equals("addToTrouser()") 
+				   object.addToTrouser();
+				if(in.equals("addToPullover()") 
+				   object.addToPullover();
+				if(in.equals("addToDress()") 
+				   object.addToDress();
+				if(in.equals("addToCoat()") 
+				   object.addToCoat();
+				if(in.equals("addToSandal()") 
+				   object.addToSandal();
+				if(in.equals("addToShirt()") 
+				   object.addToShirt();
+				if(in.equals("addToSneaker()") 
+				   object.addToSneaker();
+				if(in.equals("addToBag()") 
+				   object.addToBag();
+				if(in.equals("addToBoot()") 
+				   object.addToBoot();
+			}
+			if(in.equals("ts")){
+			   object.toString();
+			}
 	}
 
 }
