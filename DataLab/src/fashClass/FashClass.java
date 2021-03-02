@@ -16,49 +16,50 @@ public class FashClass {
 	private ArrayList<Integer> boot = new ArrayList<Integer>();
 	
 	FashClass() {
-	try {
+	 try {
 	    Scanner scan = new Scanner(new File("C:\\Users\\F\\eclipse-workspace\\Unit7 DataLab\\src\\fashion-mnist_train.csv"));
 	    scan.nextLine();
 	    while(scan.hasNextLine()) {
-			String line = scan.nextLine();
-			String[] spltLn = line.split(",");
-			  /* public String[] split(String x)
-			   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
-			   * returns a String array.
-			   */ 	
-				if(spltLn[0].equals("0"))
-					addMethod(spltLn, tee);
-				if(spltLn[0].equals("1"))
-					addMethod(spltLn, trouser);
-				if(spltLn[0].equals("2"))
-					addMethod(spltLn, pullover);
-				if(spltLn[0].equals("3"))
-					addMethod(spltLn, dress);
-				if(spltLn[0].equals("4"))
-					addMethod(spltLn, coat);
-				if(spltLn[0].equals("5"))
-					addMethod(spltLn, sandal);
-				if(spltLn[0].equals("6"))
-					addMethod(spltLn, shirt);
-				if(spltLn[0].equals("7"))
-					addMethod(spltLn, sneaker);
-				if(spltLn[0].equals("8"))
-					addMethod(spltLn, bag);
-				if(spltLn[0].equals("9"))
-					addMethod(spltLn, boot);
+		String line = scan.nextLine();
+		String[] spltLn = line.split(",");
+		  /* public String[] split(String x)
+		   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
+		   * returns a String array.
+		   */ 	
+		if(spltLn[0].equals("0"))
+			addMethod(spltLn, tee);
+		if(spltLn[0].equals("1"))
+			addMethod(spltLn, trouser);
+		if(spltLn[0].equals("2"))
+			addMethod(spltLn, pullover);
+		if(spltLn[0].equals("3"))
+			addMethod(spltLn, dress);
+		if(spltLn[0].equals("4"))
+			addMethod(spltLn, coat);
+		if(spltLn[0].equals("5"))
+			addMethod(spltLn, sandal);
+		if(spltLn[0].equals("6"))
+			addMethod(spltLn, shirt);
+		if(spltLn[0].equals("7"))
+			addMethod(spltLn, sneaker);
+		if(spltLn[0].equals("8"))
+			addMethod(spltLn, bag);
+		if(spltLn[0].equals("9"))
+			addMethod(spltLn, boot);
 	      }
 	      scan.close();
 
-	    } catch(Exception e) {
-	      e.getStackTrace();
-	    }
+	 } catch(Exception e) {
+	    e.getStackTrace();
+	 }
 	}
 	
 	private void addMethod(String[] arr, ArrayList<Integer> list) {
 		 for(int i = 1; i < arr.length; i += 140) {
 			 list.add(Integer.valueOf(arr[i]));
 		 }
-}
+	}
+	
 	/**
 	 * String name of ArrayList<Integer> given by an int representing order
 	 * 0 T-shirt/top 
@@ -102,7 +103,29 @@ public class FashClass {
 	}
 	
 	public void standardDeviation(ArrayList<Integer> list) {
+		int[] arr = convertIntegers(list);
+		double sum = 0.0;
+		int size = arr.length;
+		double sdDev = 0.0;
 		
+		for(int num : arr) { 
+			sum += num;
+		}
+		double mean = sum/size;
+		
+        	for(double num: arr) {
+           	 sdDev += Math.pow(num-mean, 2);
+        	}
+		sdDev = Math.sqrt(sdDev/size);
+	 return sdDev;
+	}
+	
+	private int[] convertIntegers(ArrayList<Integer> list) {
+	 int[] arr = new int[list.size()];
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = list.get(i).intValue();
+		}
+	 return arr;
 	}
 	
 	public String toString() {
@@ -146,6 +169,7 @@ public class FashClass {
 	
 	public static void main(String[] args) {
 		FashClass object = new FashClass();
+		//print all functions HERE
 		System.out.println(object.toString());
 		
 	}
