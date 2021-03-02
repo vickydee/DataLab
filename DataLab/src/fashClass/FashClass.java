@@ -96,8 +96,14 @@ public class FashClass {
 			return "boots";
 		return null;
 	}
-	// method 1: find mean standard deviation of all data
-	// method 2: find mean standard deviation between label	
+
+	public void standardDeviation() {
+		
+	}
+	
+	public void standardDeviation(ArrayList<Integer> list) {
+		
+	}
 	
 	public String toString() {
 		String str = "";
@@ -112,6 +118,30 @@ public class FashClass {
 		str += "8 Bag = "+bag.size()+"\n";
 		str += "9 Ankle boot = "+boot.size()+"\n";
 		return str;
+		
+	//Accessor Methods
+	public ArrayList<Integer> getTee() { 
+		return ArrayList<Integer> tee }
+	public ArrayList<Integer> getTrouser() { 
+		return ArrayList<Integer> trouser }
+	public ArrayList<Integer> getPullover() { 
+		return ArrayList<Integer> pullover }
+	public ArrayList<Integer> getDress() { 
+		return ArrayList<Integer> dress }
+	public ArrayList<Integer> getCoat() { 
+		return ArrayList<Integer> coat }
+	public ArrayList<Integer> getSandal() { 
+		return ArrayList<Integer> sandal }
+	public ArrayList<Integer> getShirt() { 
+		return ArrayList<Integer> shirt }
+	public ArrayList<Integer> getSneaker() { 
+		return ArrayList<Integer> sneaker }
+	public ArrayList<Integer> getBag() { 
+		return ArrayList<Integer> bag }
+	public ArrayList<Integer> getBoot() { 
+		return ArrayList<Integer> boot }
+
+
 	}
 	
 	public static void main(String[] args) {
