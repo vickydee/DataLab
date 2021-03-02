@@ -59,44 +59,6 @@ public class FashClass {
 			 list.add(Integer.valueOf(arr[i]));
 		 }
 	}
-	
-	/**
-	 * String name of ArrayList<Integer> given by an int representing order
-	 * 0 T-shirt/top 
-	 * 1 Trouser 
-	 * 2 Pullover 
-	 * 3 Dress 
-	 * 4 Coat 
-	 * 5 Sandal 
-	 * 6 Shirt 
-	 * 7 Sneaker 
-	 * 8 Bag 
-	 * 9 Ankle boot
-	 * @param int i The int value representing the order of arrays, beginning at 0
-	 */
-	public String nameMethod(int i) {
-		if(i == 0)
-			return "t-shirts/tees";
-		if(i == 1)
-			return "trousers";
-		if(i == 2)
-			return "pullovers";
-		if(i == 3)
-			return "dresses";
-		if(i == 4)
-			return "coats";
-		if(i == 5)
-			return "sandals";
-		if(i == 6)
-			return "shirts";
-		if(i == 7)
-			return "sneakers";
-		if(i == 8)
-			return "bags";
-		if(i == 9)
-			return "boots";
-		return null;
-	}
 
 	public double standardDeviation() {
 		double std = standardDeviation(tee);
@@ -150,32 +112,53 @@ public class FashClass {
 		str += "7 Sneaker = "+sneaker.size()+"\n";
 		str += "8 Bag = "+bag.size()+"\n";
 		str += "9 Ankle boot = "+boot.size()+"\n";
-		return str;
+	 return str;
+	}
 		
 	//Accessor Methods
-	public ArrayList<Integer> getTee() { 
-		return ArrayList<Integer> tee }
-	public ArrayList<Integer> getTrouser() { 
-		return ArrayList<Integer> trouser }
-	public ArrayList<Integer> getPullover() { 
-		return ArrayList<Integer> pullover }
-	public ArrayList<Integer> getDress() { 
-		return ArrayList<Integer> dress }
-	public ArrayList<Integer> getCoat() { 
-		return ArrayList<Integer> coat }
-	public ArrayList<Integer> getSandal() { 
-		return ArrayList<Integer> sandal }
-	public ArrayList<Integer> getShirt() { 
-		return ArrayList<Integer> shirt }
-	public ArrayList<Integer> getSneaker() { 
-		return ArrayList<Integer> sneaker }
-	public ArrayList<Integer> getBag() { 
-		return ArrayList<Integer> bag }
-	public ArrayList<Integer> getBoot() { 
-		return ArrayList<Integer> boot }
+		public ArrayList<Integer> getTee() { 
+			return tee }
+		public ArrayList<Integer> getTrouser() { 
+			return trouser }
+		public ArrayList<Integer> getPullover() { 
+			return pullover }
+		public ArrayList<Integer> getDress() { 
+			return dress }
+		public ArrayList<Integer> getCoat() { 
+			return coat }
+		public ArrayList<Integer> getSandal() { 
+			return sandal }
+		public ArrayList<Integer> getShirt() { 
+			return shirt }
+		public ArrayList<Integer> getSneaker() { 
+			return sneaker }
+		public ArrayList<Integer> getBag() { 
+			return bag }
+		public ArrayList<Integer> getBoot() { 
+			return boot }
+	
+	//Mutator Methods
+		public void addToTee(int i) { 
+			tee.add(i);}
+		public void addToTrouser(int i) { 
+			trouser.add(i);}
+		public void addToPullover(int i) { 
+			pullover.add(i);}
+		public void addToDress(int i) { 
+			dress.add(i);}
+		public void addToCoat(int i) { 
+			coat.add(i);}
+		public void addToSandal(int i) { 
+			sandal.add(i);}
+		public void addToShirt(int i) { 
+			shirt.add(i);}
+		public void addToSneaker(int i) { 
+			sneaker.add(i);}
+		public void addToBag(int i) { 
+			bag.add(i);}
+		public void addToBoot(int i) { 
+			boot.add(i);}
 
-
-	}
 	
 	public static void main(String[] args) {
 		FashClass object = new FashClass();
