@@ -59,19 +59,20 @@ public class FashClass {
 			 list.add(Integer.valueOf(arr[i]));
 		 }
 }
-/**
- * @return Name of ArrayList<Integer> given by an int representing order
- * 0 T-shirt/top 
- * 1 Trouser 
- * 2 Pullover 
- * 3 Dress 
- * 4 Coat 
- * 5 Sandal 
- * 6 Shirt 
- * 7 Sneaker 
- * 8 Bag 
- * 9 Ankle boot
- */
+	/**
+	 * String name of ArrayList<Integer> given by an int representing order
+	 * 0 T-shirt/top 
+	 * 1 Trouser 
+	 * 2 Pullover 
+	 * 3 Dress 
+	 * 4 Coat 
+	 * 5 Sandal 
+	 * 6 Shirt 
+	 * 7 Sneaker 
+	 * 8 Bag 
+	 * 9 Ankle boot
+	 * @param int i The int value representing the order of arrays, beginning at 0
+	 */
 	public String nameMethod(int i) {
 		if(i == 0)
 			return "t-shirts/tees";
