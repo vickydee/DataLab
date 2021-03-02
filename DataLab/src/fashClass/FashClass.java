@@ -1,58 +1,58 @@
 package fashClass;
 
 import java.io.*;
-// java.io.BufferedReader  
-	// BufferedReader class reads the file line by line until the end character is reached.
-	// The buffer size may be specified, or the default size may be used. 
-	// * BufferedReader(Reader in, int sz)
 import java.util.*; 
 
 public class FashClass {
-	private ArrayList<Integer> tee;
-	private ArrayList<Integer> trouser;
-	private ArrayList<Integer> pullover;
-	private ArrayList<Integer> dress;
-	private ArrayList<Integer> coat;
-	private ArrayList<Integer> sandal;
-	private ArrayList<Integer> shirt; 
-	private ArrayList<Integer> sneaker; 
-	private ArrayList<Integer> bag;
-	private ArrayList<Integer> boot;
-	
+	private ArrayList<Integer> tee, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, boot;
+		/* 0 T-shirt/top 
+		 * 1 Trouser 
+		 * 2 Pullover 
+		 * 3 Dress 
+		 * 4 Coat 
+		 * 5 Sandal 
+		 * 6 Shirt 
+		 * 7 Sneaker 
+		 * 8 Bag 
+		 * 9 Ankle boot
+		 */
 	FashClass() {
-				if(clothes[0].equals("0"))
-					addMethod(clothes, tee);
-				if(clothes[0].equals("1"))
-					addMethod(clothes, trouser);
-				if(clothes[0].equals("2"))
-					addMethod(clothes, pullover);
-				if(clothes[0].equals("3"))
-					addMethod(clothes, dress);
-				if(clothes[0].equals("4"))
-					addMethod(clothes, coat);
-				if(clothes[0].equals("5"))
-					addMethod(clothes, sandal);
-				if(clothes[0].equals("6"))
-					addMethod(clothes, shirt);
-				if(clothes[0].equals("7"))
-					addMethod(clothes, sneaker);
-				if(clothes[0].equals("8"))
-					addMethod(clothes, bag);
-				if(clothes[0].equals("9"))
-					addMethod(clothes, boot);
-				/* 0 T-shirt/top 
-				 * 1 Trouser 
-				 * 2 Pullover 
-				 * 3 Dress 
-				 * 4 Coat 
-				 * 5 Sandal 
-				 * 6 Shirt 
-				 * 7 Sneaker 
-				 * 8 Bag 
-				 * 9 Ankle boot
-				 */
-		} 
-		//All lines of the csv should've been scanned and added to their designated Integer ArrayLists at this point.
+	    try {
+	      Scanner scan = new Scanner(new File("input.csv"));
+	      scan.nextLine();
+	      while(scan.hasNextLine()) {
+		String line = scan.nextLine();
+		String[] spltLn = line.split(",");
+		  /* public String[] split(String x)
+		   * The method String.split() identifies the delimiter, splitting the string i.e. "johnny,sonny,fot" around matches of the given regular expression.
+		   * returns a String array.
+		   */ 
+			if(spltLn[0].equals("0"))
+				addMethod(spltLn, tee);
+			if(spltLn[0].equals("1"))
+				addMethod(spltLn, trouser);
+			if(spltLn[0].equals("2"))
+				addMethod(spltLn, pullover);
+			if(spltLn[0].equals("3"))
+				addMethod(spltLn, dress);
+			if(spltLn[0].equals("4"))
+				addMethod(spltLn, coat);
+			if(spltLn[0].equals("5"))
+				addMethod(spltLn, sandal);
+			if(spltLn[0].equals("6"))
+				addMethod(spltLn, shirt);
+			if(spltLn[0].equals("7"))
+				addMethod(spltLn, sneaker);
+			if(spltLn[0].equals("8"))
+				addMethod(spltLn, bag);
+			if(spltLn[0].equals("9"))
+				addMethod(spltLn, boot);
+	      }
+	      scan.close();
+
+	    } catch(Exception e) {
+	      e.getStackTrace();
+	    }
 	}
 	
 	private void addMethod(String[] arr, ArrayList<Integer> list) {
