@@ -18,7 +18,7 @@ public class FashClass {
 		 */
 	FashClass() {
 	    try {
-	      Scanner scan = new Scanner(new File("input.csv"));
+	      Scanner scan = new Scanner(new File("H:\\fashion-mnist_train.csv"));
 	      scan.nextLine();
 	      while(scan.hasNextLine()) {
 		String line = scan.nextLine();
@@ -57,7 +57,7 @@ public class FashClass {
 	
 	private void addMethod(String[] arr, ArrayList<Integer> list) {
 		 for(int i = 0; i < arr.length; i += 157)
-			 list.add(Integer.parseInt(arr[i]));
+			 list.add(Integer.getInteger(arr[i]));
 	}
 	
 	public void mostPopular() {
@@ -73,12 +73,14 @@ public class FashClass {
 		arr.add(sneaker);
 		arr.add(bag);
 		arr.add(boot);
+		
 		int index = 0;
 		for (int i = 1; i < arr.size(); i++) {
 			if(arr.get(i-1).size() < arr.get(i).size()) {
 				index = i;
 			}
 		}
+		
 		System.out.println("The most popular fashion item is " + nameMethod(index));
 	}
 	public String nameMethod(int i) {
