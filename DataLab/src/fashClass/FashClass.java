@@ -47,7 +47,7 @@ public class FashClass {
 		if(spltLn[0].equals("9"))
 			addMethod(spltLn, boot);
 	      }
-	      scan.close();
+	    scan.close();
 
 	 } catch(Exception e) {
 	    e.getStackTrace();
@@ -98,11 +98,21 @@ public class FashClass {
 		return null;
 	}
 
-	public void standardDeviation() {
-		
+	public double standardDeviation() {
+		double std = standardDeviation(tee);
+		std += standardDeviation(trouser);
+		std += standardDeviation(pullover);
+		std += standardDeviation(dress);
+		std += standardDeviation(coat);
+		std += standardDeviation(sandal);
+		std += standardDeviation(shirt);
+		std += standardDeviation(sneaker);
+		std += standardDeviation(bag);
+		std += standardDeviation(boot);
+	 return std / 10;
 	}
 	
-	public void standardDeviation(ArrayList<Integer> list) {
+	public double standardDeviation(ArrayList<Integer> list) {
 		int[] arr = convertIntegers(list);
 		double sum = 0.0;
 		int size = arr.length;
@@ -171,7 +181,8 @@ public class FashClass {
 		FashClass object = new FashClass();
 		//print all functions HERE
 		System.out.println(object.toString());
-		
+		double std = object.standardDeviation();
+		System.out.println("Standard Deviation of all data: " + std);
 	}
 
 }
