@@ -58,9 +58,20 @@ public class FashClass {
 		 for(int i = 1; i < arr.length; i += 140) {
 			 list.add(Integer.valueOf(arr[i]));
 		 }
-	}
-//USES: I.E.	
-	//System.out.println("The most popular fashion item is " + nameMethod(index));
+}
+/**
+ * @return Name of ArrayList<Integer> given by an int representing order
+ * 0 T-shirt/top 
+ * 1 Trouser 
+ * 2 Pullover 
+ * 3 Dress 
+ * 4 Coat 
+ * 5 Sandal 
+ * 6 Shirt 
+ * 7 Sneaker 
+ * 8 Bag 
+ * 9 Ankle boot
+ */
 	public String nameMethod(int i) {
 		if(i == 0)
 			return "t-shirts/tees";
